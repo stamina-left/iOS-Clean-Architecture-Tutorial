@@ -15,6 +15,11 @@
 		5EF151EB253825E800232ECA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF151E9253825E800232ECA /* LaunchScreen.storyboard */; };
 		5EF151F6253825E800232ECA /* iOS_Clean_Architecture_TutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF151F5253825E800232ECA /* iOS_Clean_Architecture_TutorialTests.swift */; };
 		5EF15201253825E800232ECA /* iOS_Clean_Architecture_TutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF15200253825E800232ECA /* iOS_Clean_Architecture_TutorialUITests.swift */; };
+		5EF15223253833CC00232ECA /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF15222253833CC00232ECA /* Document.swift */; };
+		5EF152292538528000232ECA /* SearchDocumentsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF152282538528000232ECA /* SearchDocumentsUseCase.swift */; };
+		5EF152342538552000232ECA /* DefaultDocumentsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF152332538552000232ECA /* DefaultDocumentsRepository.swift */; };
+		5EF1523A25385A4F00232ECA /* DefaultDocumentsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF1523925385A4F00232ECA /* DefaultDocumentsStorage.swift */; };
+		5EF152442538604A00232ECA /* CoreDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5EF152422538604A00232ECA /* CoreDataStorage.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		5EF151FC253825E800232ECA /* iOS-Clean-Architecture-TutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-Clean-Architecture-TutorialUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF15200253825E800232ECA /* iOS_Clean_Architecture_TutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Clean_Architecture_TutorialUITests.swift; sourceTree = "<group>"; };
 		5EF15202253825E800232ECA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EF15222253833CC00232ECA /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		5EF152282538528000232ECA /* SearchDocumentsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDocumentsUseCase.swift; sourceTree = "<group>"; };
+		5EF152332538552000232ECA /* DefaultDocumentsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDocumentsRepository.swift; sourceTree = "<group>"; };
+		5EF1523925385A4F00232ECA /* DefaultDocumentsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDocumentsStorage.swift; sourceTree = "<group>"; };
+		5EF152432538604A00232ECA /* CoreDataStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataStorage.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,8 @@
 			children = (
 				5EF1521125382F9400232ECA /* Application */,
 				5EF152132538311400232ECA /* View */,
+				5EF152182538336100232ECA /* Domain */,
+				5EF15231253854F400232ECA /* Data */,
 				5EF1521225382FBB00232ECA /* Resources */,
 			);
 			path = "iOS-Clean-Architecture-Tutorial";
@@ -150,6 +162,65 @@
 				5EF151E4253825E800232ECA /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5EF152182538336100232ECA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5EF15219253833B100232ECA /* Entities */,
+				5EF15227253851CD00232ECA /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5EF15219253833B100232ECA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5EF15222253833CC00232ECA /* Document.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		5EF15227253851CD00232ECA /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				5EF152282538528000232ECA /* SearchDocumentsUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		5EF15231253854F400232ECA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5EF152322538550B00232ECA /* Repositories */,
+				5EF15238253857BC00232ECA /* PersistentStorages */,
+				5EF152412538603000232ECA /* CoreDataStorage */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5EF152322538550B00232ECA /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5EF152332538552000232ECA /* DefaultDocumentsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		5EF15238253857BC00232ECA /* PersistentStorages */ = {
+			isa = PBXGroup;
+			children = (
+				5EF1523925385A4F00232ECA /* DefaultDocumentsStorage.swift */,
+			);
+			path = PersistentStorages;
+			sourceTree = "<group>";
+		};
+		5EF152412538603000232ECA /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				5EF152422538604A00232ECA /* CoreDataStorage.xcdatamodeld */,
+			);
+			path = CoreDataStorage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,9 +353,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF15223253833CC00232ECA /* Document.swift in Sources */,
 				5EF151E3253825E800232ECA /* ViewController.swift in Sources */,
 				5EF151DF253825E800232ECA /* AppDelegate.swift in Sources */,
+				5EF152292538528000232ECA /* SearchDocumentsUseCase.swift in Sources */,
+				5EF152442538604A00232ECA /* CoreDataStorage.xcdatamodeld in Sources */,
+				5EF152342538552000232ECA /* DefaultDocumentsRepository.swift in Sources */,
 				5EF151E1253825E800232ECA /* SceneDelegate.swift in Sources */,
+				5EF1523A25385A4F00232ECA /* DefaultDocumentsStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +538,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 75KSF446RQ;
-				INFOPLIST_FILE = "iOS-Clean-Architecture-Tutorial/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/iOS-Clean-Architecture-Tutorial/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,7 +557,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 75KSF446RQ;
-				INFOPLIST_FILE = "iOS-Clean-Architecture-Tutorial/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/iOS-Clean-Architecture-Tutorial/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -617,6 +693,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5EF152422538604A00232ECA /* CoreDataStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5EF152432538604A00232ECA /* CoreDataStorage.xcdatamodel */,
+			);
+			currentVersion = 5EF152432538604A00232ECA /* CoreDataStorage.xcdatamodel */;
+			path = CoreDataStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5EF151D3253825E800232ECA /* Project object */;
 }
