@@ -99,13 +99,9 @@
 		5EF151DD253825E800232ECA /* iOS-Clean-Architecture-Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				5EF151DE253825E800232ECA /* AppDelegate.swift */,
-				5EF151E0253825E800232ECA /* SceneDelegate.swift */,
-				5EF151E2253825E800232ECA /* ViewController.swift */,
-				5EF151E4253825E800232ECA /* Main.storyboard */,
-				5EF151E7253825E800232ECA /* Assets.xcassets */,
-				5EF151E9253825E800232ECA /* LaunchScreen.storyboard */,
-				5EF151EC253825E800232ECA /* Info.plist */,
+				5EF1521125382F9400232ECA /* Application */,
+				5EF152132538311400232ECA /* View */,
+				5EF1521225382FBB00232ECA /* Resources */,
 			);
 			path = "iOS-Clean-Architecture-Tutorial";
 			sourceTree = "<group>";
@@ -126,6 +122,34 @@
 				5EF15202253825E800232ECA /* Info.plist */,
 			);
 			path = "iOS-Clean-Architecture-TutorialUITests";
+			sourceTree = "<group>";
+		};
+		5EF1521125382F9400232ECA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5EF151DE253825E800232ECA /* AppDelegate.swift */,
+				5EF151E0253825E800232ECA /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5EF1521225382FBB00232ECA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5EF151E7253825E800232ECA /* Assets.xcassets */,
+				5EF151E9253825E800232ECA /* LaunchScreen.storyboard */,
+				5EF151EC253825E800232ECA /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5EF152132538311400232ECA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5EF151E2253825E800232ECA /* ViewController.swift */,
+				5EF151E4253825E800232ECA /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
