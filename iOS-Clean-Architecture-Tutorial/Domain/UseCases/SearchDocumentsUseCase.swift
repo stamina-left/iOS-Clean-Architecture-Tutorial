@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SearchDocumentsUseCase {
-    func execute(requestValue: SearchDocumentsUseCaseRequestValue,
+    func execute(requestValue: SearchDocumentsUseCaseRequestDTO,
                  completion: @escaping (Result<[Document], Error>) -> Void)
 }
 
@@ -19,7 +19,7 @@ final class DefaultSearchDocumentsUseCase: SearchDocumentsUseCase {
     init(repository: DocumentsRepository) {
         self.repository = repository
     }
-    func execute(requestValue: SearchDocumentsUseCaseRequestValue, completion: @escaping (Result<[Document], Error>) -> Void) {
+    func execute(requestValue: SearchDocumentsUseCaseRequestDTO, completion: @escaping (Result<[Document], Error>) -> Void) {
         repository.fetchDocumentsList(requestValue: requestValue) { result in
             switch result {
             case .success(let documents):
@@ -31,6 +31,6 @@ final class DefaultSearchDocumentsUseCase: SearchDocumentsUseCase {
     }
 }
 
-struct SearchDocumentsUseCaseRequestValue {
+struct SearchDocumentsUseCaseRequestDTO {
     let name: String
 }

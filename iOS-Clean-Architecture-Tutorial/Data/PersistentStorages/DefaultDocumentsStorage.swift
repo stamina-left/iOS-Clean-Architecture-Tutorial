@@ -10,13 +10,13 @@ import UIKit
 import CoreData
 
 protocol DocumentsStorage {
-    func fetchDocuments(requestValue: SearchDocumentsUseCaseRequestValue,
+    func fetchDocuments(requestDTO: SearchDocumentsUseCaseRequestDTO,
                         completion: (Result<[Document], Error>) -> Void)
 }
 
 final class DefaultDocumentsStorage: DocumentsStorage {
     
-    func fetchDocuments(requestValue: SearchDocumentsUseCaseRequestValue, completion: (Result<[Document], Error>) -> Void) {
+    func fetchDocuments(requestDTO: SearchDocumentsUseCaseRequestDTO, completion: (Result<[Document], Error>) -> Void) {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         

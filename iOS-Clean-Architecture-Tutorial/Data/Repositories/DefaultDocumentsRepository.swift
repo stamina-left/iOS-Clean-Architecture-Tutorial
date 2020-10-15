@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DocumentsRepository {
-    func fetchDocumentsList(requestValue: SearchDocumentsUseCaseRequestValue,
+    func fetchDocumentsList(requestValue: SearchDocumentsUseCaseRequestDTO,
                             completion: @escaping (Result<[Document], Error>) -> Void)
 }
 
@@ -20,8 +20,8 @@ final class DefaultDocumentsRepository: DocumentsRepository {
         self.storage = storage
     }
     
-    func fetchDocumentsList(requestValue: SearchDocumentsUseCaseRequestValue, completion: @escaping (Result<[Document], Error>) -> Void) {
-        storage.fetchDocuments(requestValue: requestValue) { result in
+    func fetchDocumentsList(requestValue: SearchDocumentsUseCaseRequestDTO, completion: @escaping (Result<[Document], Error>) -> Void) {
+        storage.fetchDocuments(requestDTO: requestValue) { result in
             switch result {
             case .success(let documents):
                 completion(.success(documents))

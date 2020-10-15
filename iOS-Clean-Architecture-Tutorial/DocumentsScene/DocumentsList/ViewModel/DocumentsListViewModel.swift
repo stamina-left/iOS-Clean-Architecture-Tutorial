@@ -35,7 +35,7 @@ final class DefaultDocumentsListViewModel: DocumentsListViewModel {
     
     // MARK: - Private
     
-    private func load(requestValue: SearchDocumentsUseCaseRequestValue) {
+    private func load(requestValue: SearchDocumentsUseCaseRequestDTO) {
         
         searchDocumentsUseCase.execute(requestValue: requestValue) { result in
             switch result {
@@ -53,6 +53,6 @@ final class DefaultDocumentsListViewModel: DocumentsListViewModel {
 extension DefaultDocumentsListViewModel {
     
     func didSearch(query: String) {
-        load(requestValue: SearchDocumentsUseCaseRequestValue(name: query))
+        load(requestValue: SearchDocumentsUseCaseRequestDTO(name: query))
     }
 }
