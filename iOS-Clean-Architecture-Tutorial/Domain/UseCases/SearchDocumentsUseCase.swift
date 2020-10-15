@@ -14,9 +14,9 @@ protocol SearchDocumentsUseCase {
 
 final class DefaultSearchDocumentsUseCase: SearchDocumentsUseCase {
     
-    private let repository: DefaultDocumentsRepository
+    private let repository: DocumentsRepository
     
-    init(repository: DefaultDocumentsRepository) {
+    init(repository: DocumentsRepository) {
         self.repository = repository
     }
     func execute(requestValue: SearchDocumentsUseCaseRequestValue, completion: @escaping (Result<[Document], Error>) -> Void) {

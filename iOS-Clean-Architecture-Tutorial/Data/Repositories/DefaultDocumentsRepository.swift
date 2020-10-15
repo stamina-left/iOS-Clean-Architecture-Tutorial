@@ -14,9 +14,9 @@ protocol DocumentsRepository {
 
 final class DefaultDocumentsRepository: DocumentsRepository {
     
-    private let storage : DefaultDocumentsStorage
+    private let storage : DocumentsStorage
     
-    init(storage: DefaultDocumentsStorage) {
+    init(storage: DocumentsStorage) {
         self.storage = storage
     }
     

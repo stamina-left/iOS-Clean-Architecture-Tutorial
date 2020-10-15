@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E384E8A2538B63C00DFA03D /* DocumentsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E384E892538B63C00DFA03D /* DocumentsListViewModel.swift */; };
+		5E384E922538B8E500DFA03D /* DocumentsListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E384E912538B8E500DFA03D /* DocumentsListItemViewModel.swift */; };
+		5E384E972538C84100DFA03D /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E384E962538C84100DFA03D /* AppDIContainer.swift */; };
+		5E384EA02538C88200DFA03D /* DocumentsSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E384E9F2538C88200DFA03D /* DocumentsSceneDIContainer.swift */; };
 		5EF151DF253825E800232ECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF151DE253825E800232ECA /* AppDelegate.swift */; };
 		5EF151E1253825E800232ECA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF151E0253825E800232ECA /* SceneDelegate.swift */; };
 		5EF151E3253825E800232ECA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF151E2253825E800232ECA /* ViewController.swift */; };
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E384E892538B63C00DFA03D /* DocumentsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsListViewModel.swift; sourceTree = "<group>"; };
+		5E384E912538B8E500DFA03D /* DocumentsListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsListItemViewModel.swift; sourceTree = "<group>"; };
+		5E384E962538C84100DFA03D /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		5E384E9F2538C88200DFA03D /* DocumentsSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsSceneDIContainer.swift; sourceTree = "<group>"; };
 		5EF151DB253825E800232ECA /* iOS-Clean-Architecture-Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Clean-Architecture-Tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF151DE253825E800232ECA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EF151E0253825E800232ECA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +94,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E384E802538B49E00DFA03D /* DocumentsList */ = {
+			isa = PBXGroup;
+			children = (
+				5E384E882538B57F00DFA03D /* ViewModel */,
+				5EF152132538311400232ECA /* View */,
+			);
+			path = DocumentsList;
+			sourceTree = "<group>";
+		};
+		5E384E842538B4BC00DFA03D /* DocumentsScene */ = {
+			isa = PBXGroup;
+			children = (
+				5E384E802538B49E00DFA03D /* DocumentsList */,
+			);
+			path = DocumentsScene;
+			sourceTree = "<group>";
+		};
+		5E384E882538B57F00DFA03D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5E384E892538B63C00DFA03D /* DocumentsListViewModel.swift */,
+				5E384E912538B8E500DFA03D /* DocumentsListItemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5E384E9B2538C84500DFA03D /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				5E384E962538C84100DFA03D /* AppDIContainer.swift */,
+				5E384E9F2538C88200DFA03D /* DocumentsSceneDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
 		5EF151D2253825E800232ECA = {
 			isa = PBXGroup;
 			children = (
@@ -110,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				5EF1521125382F9400232ECA /* Application */,
-				5EF152132538311400232ECA /* View */,
+				5E384E842538B4BC00DFA03D /* DocumentsScene */,
 				5EF152182538336100232ECA /* Domain */,
 				5EF15231253854F400232ECA /* Data */,
 				5EF1521225382FBB00232ECA /* Resources */,
@@ -141,6 +184,7 @@
 			children = (
 				5EF151DE253825E800232ECA /* AppDelegate.swift */,
 				5EF151E0253825E800232ECA /* SceneDelegate.swift */,
+				5E384E9B2538C84500DFA03D /* DIContainer */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -353,9 +397,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E384E972538C84100DFA03D /* AppDIContainer.swift in Sources */,
 				5EF15223253833CC00232ECA /* Document.swift in Sources */,
 				5EF151E3253825E800232ECA /* ViewController.swift in Sources */,
+				5E384E922538B8E500DFA03D /* DocumentsListItemViewModel.swift in Sources */,
 				5EF151DF253825E800232ECA /* AppDelegate.swift in Sources */,
+				5E384E8A2538B63C00DFA03D /* DocumentsListViewModel.swift in Sources */,
+				5E384EA02538C88200DFA03D /* DocumentsSceneDIContainer.swift in Sources */,
 				5EF152292538528000232ECA /* SearchDocumentsUseCase.swift in Sources */,
 				5EF152442538604A00232ECA /* CoreDataStorage.xcdatamodeld in Sources */,
 				5EF152342538552000232ECA /* DefaultDocumentsRepository.swift in Sources */,

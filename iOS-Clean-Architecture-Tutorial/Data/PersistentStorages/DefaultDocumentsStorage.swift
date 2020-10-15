@@ -15,6 +15,7 @@ protocol DocumentsStorage {
 }
 
 final class DefaultDocumentsStorage: DocumentsStorage {
+    
     func fetchDocuments(requestValue: SearchDocumentsUseCaseRequestValue, completion: (Result<[Document], Error>) -> Void) {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -39,11 +40,10 @@ final class DefaultDocumentsStorage: DocumentsStorage {
                                         modified: dateFormatter.date(from: modified))
                 documentResult.append(document)
             }
+            completion(.success(documentResult))
         } catch {
             completion(.failure(error))
         }
-        
-        completion(.success(documentResult))
     }
     // MARK: - Private
     
