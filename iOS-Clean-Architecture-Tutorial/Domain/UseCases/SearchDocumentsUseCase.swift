@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SearchDocumentsUseCase {
-    func execute(requestValue: SearchDocumentsUseCaseRequestDTO,
+    func execute(requestDTO: SearchDocumentsUseCaseRequestDTO,
                  completion: @escaping (Result<[Document], Error>) -> Void)
 }
 
@@ -19,8 +19,8 @@ final class DefaultSearchDocumentsUseCase: SearchDocumentsUseCase {
     init(repository: DocumentsRepository) {
         self.repository = repository
     }
-    func execute(requestValue: SearchDocumentsUseCaseRequestDTO, completion: @escaping (Result<[Document], Error>) -> Void) {
-        repository.fetchDocumentsList(requestValue: requestValue) { result in
+    func execute(requestDTO: SearchDocumentsUseCaseRequestDTO, completion: @escaping (Result<[Document], Error>) -> Void) {
+        repository.fetchDocumentsList(requestDTO: requestDTO) { result in
             switch result {
             case .success(let documents):
                 completion(.success(documents))

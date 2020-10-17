@@ -11,9 +11,20 @@ final class DocumentsSceneDIContainer {
     
     static func makeSearchDocumentsUseCase() -> SearchDocumentsUseCase {
         
-        let storage: DocumentsStorage = DefaultDocumentsStorage()
+        let coreDataStorage = CoreDataStorage()
+        let storage: DocumentsStorage = DefaultDocumentsStorage(coreDataStorage: coreDataStorage)
         let repository: DocumentsRepository = DefaultDocumentsRepository(storage: storage)
         let useCase: SearchDocumentsUseCase = DefaultSearchDocumentsUseCase(repository: repository)
+        
+        return useCase
+    }
+    
+    static func makeSaveDocumentUseCase() -> SaveDocumentUseCase {
+        
+        let coreDataStorage = CoreDataStorage()
+        let storage: DocumentsStorage = DefaultDocumentsStorage(coreDataStorage: coreDataStorage)
+        let repository: DocumentsRepository = DefaultDocumentsRepository(storage: storage)
+        let useCase: SaveDocumentUseCase = DefaultSaveDocumentUseCase(repository: repository)
         
         return useCase
     }

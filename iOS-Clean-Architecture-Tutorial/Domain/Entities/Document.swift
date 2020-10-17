@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Document: Identifiable {
+struct Document: Equatable, Identifiable {
     typealias Identifier = String
     let id: Identifier
     let title: String?

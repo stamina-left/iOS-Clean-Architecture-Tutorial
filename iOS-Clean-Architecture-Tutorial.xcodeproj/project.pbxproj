@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E135C8C253AB54100864648 /* SaveDocumentUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E135C8B253AB54100864648 /* SaveDocumentUseCase.swift */; };
+		5E135C91253AC10800864648 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E135C90253AC10800864648 /* CoreDataStorage.swift */; };
 		5E384E8A2538B63C00DFA03D /* DocumentsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E384E892538B63C00DFA03D /* DocumentsListViewModel.swift */; };
 		5E384E922538B8E500DFA03D /* DocumentsListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E384E912538B8E500DFA03D /* DocumentsListItemViewModel.swift */; };
 		5E384E972538C84100DFA03D /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E384E962538C84100DFA03D /* AppDIContainer.swift */; };
 		5E384EA02538C88200DFA03D /* DocumentsSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E384E9F2538C88200DFA03D /* DocumentsSceneDIContainer.swift */; };
+		5E795E6C2539704600A636CF /* SearchDocumentsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E795E6B2539704600A636CF /* SearchDocumentsUseCaseTests.swift */; };
 		5EF151DF253825E800232ECA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF151DE253825E800232ECA /* AppDelegate.swift */; };
 		5EF151E1253825E800232ECA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF151E0253825E800232ECA /* SceneDelegate.swift */; };
 		5EF151E3253825E800232ECA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF151E2253825E800232ECA /* ViewController.swift */; };
@@ -44,10 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E135C8B253AB54100864648 /* SaveDocumentUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDocumentUseCase.swift; sourceTree = "<group>"; };
+		5E135C90253AC10800864648 /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
 		5E384E892538B63C00DFA03D /* DocumentsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsListViewModel.swift; sourceTree = "<group>"; };
 		5E384E912538B8E500DFA03D /* DocumentsListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsListItemViewModel.swift; sourceTree = "<group>"; };
 		5E384E962538C84100DFA03D /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		5E384E9F2538C88200DFA03D /* DocumentsSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsSceneDIContainer.swift; sourceTree = "<group>"; };
+		5E795E6B2539704600A636CF /* SearchDocumentsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDocumentsUseCaseTests.swift; sourceTree = "<group>"; };
 		5EF151DB253825E800232ECA /* iOS-Clean-Architecture-Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Clean-Architecture-Tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF151DE253825E800232ECA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EF151E0253825E800232ECA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +135,22 @@
 			path = DIContainer;
 			sourceTree = "<group>";
 		};
+		5E795E702539704900A636CF /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				5E795E6B2539704600A636CF /* SearchDocumentsUseCaseTests.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		5E795E742539705100A636CF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5E795E702539704900A636CF /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		5EF151D2253825E800232ECA = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +186,7 @@
 		5EF151F4253825E800232ECA /* iOS-Clean-Architecture-TutorialTests */ = {
 			isa = PBXGroup;
 			children = (
+				5E795E742539705100A636CF /* Domain */,
 				5EF151F5253825E800232ECA /* iOS_Clean_Architecture_TutorialTests.swift */,
 				5EF151F7253825E800232ECA /* Info.plist */,
 			);
@@ -229,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				5EF152282538528000232ECA /* SearchDocumentsUseCase.swift */,
+				5E135C8B253AB54100864648 /* SaveDocumentUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -262,6 +286,7 @@
 		5EF152412538603000232ECA /* CoreDataStorage */ = {
 			isa = PBXGroup;
 			children = (
+				5E135C90253AC10800864648 /* CoreDataStorage.swift */,
 				5EF152422538604A00232ECA /* CoreDataStorage.xcdatamodeld */,
 			);
 			path = CoreDataStorage;
@@ -399,6 +424,7 @@
 			files = (
 				5E384E972538C84100DFA03D /* AppDIContainer.swift in Sources */,
 				5EF15223253833CC00232ECA /* Document.swift in Sources */,
+				5E135C8C253AB54100864648 /* SaveDocumentUseCase.swift in Sources */,
 				5EF151E3253825E800232ECA /* ViewController.swift in Sources */,
 				5E384E922538B8E500DFA03D /* DocumentsListItemViewModel.swift in Sources */,
 				5EF151DF253825E800232ECA /* AppDelegate.swift in Sources */,
@@ -408,6 +434,7 @@
 				5EF152442538604A00232ECA /* CoreDataStorage.xcdatamodeld in Sources */,
 				5EF152342538552000232ECA /* DefaultDocumentsRepository.swift in Sources */,
 				5EF151E1253825E800232ECA /* SceneDelegate.swift in Sources */,
+				5E135C91253AC10800864648 /* CoreDataStorage.swift in Sources */,
 				5EF1523A25385A4F00232ECA /* DefaultDocumentsStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E795E6C2539704600A636CF /* SearchDocumentsUseCaseTests.swift in Sources */,
 				5EF151F6253825E800232ECA /* iOS_Clean_Architecture_TutorialTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
