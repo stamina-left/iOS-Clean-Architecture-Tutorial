@@ -145,6 +145,14 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		5E3E33E9253C65AA00803B9A /* DocumentsStorage */ = {
+			isa = PBXGroup;
+			children = (
+				5EF1523925385A4F00232ECA /* DefaultDocumentsStorage.swift */,
+			);
+			path = DocumentsStorage;
+			sourceTree = "<group>";
+		};
 		5E795E702539704900A636CF /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,7 +281,6 @@
 			children = (
 				5EF152322538550B00232ECA /* Repositories */,
 				5EF15238253857BC00232ECA /* PersistentStorages */,
-				5EF152412538603000232ECA /* CoreDataStorage */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -289,7 +296,8 @@
 		5EF15238253857BC00232ECA /* PersistentStorages */ = {
 			isa = PBXGroup;
 			children = (
-				5EF1523925385A4F00232ECA /* DefaultDocumentsStorage.swift */,
+				5E3E33E9253C65AA00803B9A /* DocumentsStorage */,
+				5EF152412538603000232ECA /* CoreDataStorage */,
 			);
 			path = PersistentStorages;
 			sourceTree = "<group>";
